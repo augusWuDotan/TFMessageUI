@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#7cc5a4">
+
+    <include
+        layout="@layout/include_toolbar_type_one"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivfcSelectBackGround"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.946"
+            app:srcCompat="@drawable/contact_search_background" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvfcSelectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minWidth="45dp"
+            android:text="搜尋"
+            android:textColor="#8e8e8e"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivfcSelectBackGround"
+            app:layout_constraintEnd_toEndOf="@+id/ivfcSelectBackGround"
+            app:layout_constraintStart_toStartOf="@+id/ivfcSelectBackGround"
+            app:layout_constraintTop_toTopOf="@+id/ivfcSelectBackGround" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivfcSelectIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvfcSelectTitle"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/tvfcSelectTitle"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/ivfcSelectBackGround"
+            app:layout_constraintTop_toTopOf="@+id/tvfcSelectTitle"
+            app:srcCompat="@drawable/search" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvfcContact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

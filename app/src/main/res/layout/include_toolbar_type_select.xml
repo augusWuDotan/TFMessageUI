@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bar"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:background="#ededed">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivfcSelectBackGround"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.744"
+        app:srcCompat="@drawable/contact_search_background" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivfcSelectIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivfcSelectBackGround"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/ivfcSelectBackGround"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ivfcSelectBackGround"
+        app:layout_constraintTop_toTopOf="@+id/ivfcSelectBackGround"
+        app:srcCompat="@drawable/search" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etittsSearch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="12dp"
+        android:background="#f8f8f8"
+        android:textSize="18sp"
+        android:textColorHint="#8e8e8e"
+        android:hint="搜尋"
+        android:gravity="start|center_vertical"
+        android:textColor="#0b0b0b"
+        app:layout_constraintBottom_toBottomOf="@+id/ivfcSelectBackGround"
+        app:layout_constraintEnd_toEndOf="@+id/ivfcSelectBackGround"
+        app:layout_constraintStart_toEndOf="@+id/ivfcSelectIcon"
+        app:layout_constraintTop_toTopOf="@+id/ivfcSelectBackGround" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvittsCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="取消"
+        android:textColor="#6fbd9a"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/ivfcSelectBackGround"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

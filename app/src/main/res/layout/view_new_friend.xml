@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f8f8f8"
+    android:orientation="vertical">
+    <!--  5.067 : 1 -->
+    <View
+        android:id="@+id/v1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/vBottomLine"
+        app:layout_constraintDimensionRatio="5.067:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vBottomLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:background="#d8d8d8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivVcfAvatar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/v1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/v1"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/v1"
+        app:layout_constraintTop_toTopOf="@+id/v1"
+        app:layout_constraintWidth_percent="0.144"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvVnfName"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="42dp"
+        android:gravity="center_vertical"
+        android:textColor="#0b0b0b"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvVnfMessage"
+        app:layout_constraintEnd_toEndOf="@+id/v1"
+        app:layout_constraintStart_toEndOf="@+id/ivVcfAvatar"
+        app:layout_constraintTop_toTopOf="@+id/v1"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/tvVnfMessage"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="42dp"
+        android:gravity="center_vertical"
+        android:textColor="#8e8e8e"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/v1"
+        app:layout_constraintEnd_toEndOf="@+id/v1"
+        app:layout_constraintStart_toEndOf="@+id/ivVcfAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/tvVnfName"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/tvVnfNewFriendInviteCount"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="27dp"
+        android:background="@drawable/contact_new_friend_count_background"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/v1"
+        app:layout_constraintEnd_toEndOf="@+id/v1"
+        app:layout_constraintTop_toTopOf="@+id/v1"
+        tools:text="99" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
